@@ -1,0 +1,47 @@
+// ошибка в фигурных скопках
+
+----------------------Ошибка 
+
+ if(theArray[lowPtr] < theArray[highPtr]) {
+                workSpace[j++] = theArray[lowPtr++];
+            }
+            else
+            {
+                workSpace[j++] = theArray[highPtr++];
+            }
+            while (lowPtr <= mid ){
+                workSpace[j++] = theArray[lowPtr++];
+            }
+
+            while (highPtr <= upperBound){
+                workSpace[j++] = theArray[highPtr++];
+            }
+
+            for(j=0; j<n; j++)
+                theArray[lowerBound+j] = workSpace[j];
+            }
+        }
+    }
+
+------------------------Правильно
+
+ if (theArray[lowPtr] < theArray[highPtr])
+                workSpace[j++] = theArray[lowPtr++];
+
+            else
+
+                workSpace[j++] = theArray[highPtr++];
+
+        while (lowPtr <= mid)
+            workSpace[j++] = theArray[lowPtr++];
+
+
+        while (highPtr <= upperBound)
+            workSpace[j++] = theArray[highPtr++];
+
+
+        for (j = 0; j < n; j++)
+            theArray[lowerBound + j] = workSpace[j];
+    }
+}
+
